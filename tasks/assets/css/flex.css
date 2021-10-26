@@ -1,0 +1,464 @@
+
+
+/*Главный контейнер*/
+.main{
+    background-image: url(../pic/web.jpg);
+    width: 100%;
+    height: 1300px;
+
+}
+/*Контейнер под персонажей*/
+.container_flex{
+    margin-top: 60px;
+    display: flex;
+    overflow: hidden;
+    background-color: gainsboro;
+    width: 300px;
+    height: 300px; 
+    align-items: center;
+    /*flex-wrap: flex-end; */
+     margin: 0 auto;
+    
+}
+
+/*Вращение по клику*/
+.container_flex:active{
+    transform: rotate(400grad);
+    transition: 5s linear;
+     -webkit-transform: rotate(400grad);
+    -o-transform: rotate(400grad);
+    -moz-transform: rotate(400grad);
+    
+    
+}
+/*Принц статика*/
+.prince{
+    width: 175px;
+    height: 250px;
+    background-image: url("../pic/frog1.png");
+    background-repeat: no-repeat;
+   background-position: left;
+    margin-bottom: 0; 
+}
+/*Лягушка основа*/
+.frog{
+    width: 175px;
+    height: 250px;
+    background: url("../pic/frog3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 0;
+}
+/*Появление при наведении*/
+.frog:hover{
+    width: 175px;
+    height: 250px;
+    background: url("../pic/frog3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 1;
+    transform: translate(-70px, 0);
+    transition: .5s;
+     -webkit-transform:translate(-70px, 0);
+    -o-transform: translate(-70px, 0);
+    -moz-transform: translate(-70px, 0);
+   
+    
+}
+/*Надпись при наведении*/
+.frog:hover::before{
+    position: absolute;
+    content: "Ты кто?";
+    color: green;
+    font-size: 28px;
+    right: 30px;
+}
+
+/*Принцесса при клике*/
+.frog:active{
+    width: 175px;
+    height: 250px;
+    /*opacity: 1;*/
+    background-image: url("../pic/frog2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    
+    transform: scale(1.4) translate(-85px, 0);
+    transition: .5s;  
+    
+     -webkit-transform: scale(1.4) translate(-85px, 0);
+    -o-transform: scale(1.4) translate(-85px, 0);
+    -moz-transform: scale(1.4) translate(-85px, 0);
+}
+
+/*Надпись при клике*/
+.frog:active::before{
+    position: absolute;
+    content: "Принцесса!";
+    color: green;
+    font-size: 20px;
+    left: 30px;
+    bottom: 210px;
+}
+
+
+.container_kitty{
+    position: relative;
+    margin auto;
+    display: block;
+    margin-top: 5%;
+    width: 200px;
+    height: 200px;
+    border: solid 5px black;
+    margin: 0 auto;
+    top: 40px;
+}
+ 
+.cat_head {
+    position: absolute;
+    top: 34%;
+    right: 10%;
+    width: 30%;
+    height: 30%;
+    background-color: darkgray;
+    border-radius: 100%;
+}
+
+.cat_body{
+    content: "";
+    position: relative;
+    top: 35%;
+    width: 60%;
+    height: 30%;
+    left: 26%;
+    background-color: gray;
+    background: radial-gradient(white, gray);
+    border-radius: 100%;
+}
+
+.cat_tail{
+    position: relative;
+    top: 2%;
+    width: 40%;
+    height: 10%;
+    left: 4%;
+    border-radius: 100%;
+    transform: rotate(75grad);
+    background: gray;
+     background: radial-gradient(white, gray); 
+}
+
+.ear_left {
+	position: absolute;
+  	width: 10%;
+  	height: 10%;
+  	top: 47%;
+  	right: 20%;
+	margin: -20px 0 20px 0;
+	border-radius: 50%;
+	box-shadow: 15px 8px 0 0 gray;
+	z-index: 3;
+	transform: rotate(230deg);  
+     -webkit-transform: rotate(230deg); 
+    -o-transform: rotate(230deg); 
+    -moz-transform: rotate(230deg); 
+    
+}
+
+.ear_right {
+	position: absolute;
+  	width: 10%;
+  	height: 10%;
+  	top: 47%;
+  	right: 15%;
+	margin: -20px 0 20px 0;
+	border-radius: 50%;
+	box-shadow: 15px 8px 0 0 gray;
+	z-index: 3;
+	transform: rotate(280deg);
+     -webkit-transform: rotate(280deg); 
+    -o-transform: rotate(280deg);
+    -moz-transform: rotate(280deg);
+}
+
+.mouth_left{
+position:absolute;
+top:46%;
+right:22%;
+height: 8%;
+width: 8%;
+border-radius: 0 0 40% 48%;
+border-bottom: 1.2px solid black;
+transform: rotate(-40deg);
+     -webkit-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    
+z-index:3;
+}
+
+.mouth_right{
+position:absolute;
+top:46%;
+right:15%;
+height: 8%;
+width: 8%;
+border-radius: 0 0 48% 40%;
+border-bottom: 1.2px solid black;
+transform: rotate(40deg);
+     -webkit-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+z-index:3;
+}
+
+.mouth_center{
+    position: absolute;
+    top: 53%;
+    right: 19.6%;
+    width: 5%;
+    height: 6%;
+    background-color: pink;
+    border-radius: 100%; 
+    transform: rotate(-17grad);
+    -webkit-transform: rotate(-17grad);
+    -o-transform: rotate(-17grad);
+    -moz-transform: rotate(-17grad);
+}
+
+.nose{
+    position: absolute;
+    top: 48%;
+    right: 21%;
+    width: 3%;
+    height: 5%;
+    background-color: black;
+    border-radius: 100%; 
+    transform: rotate(90grad);
+    -webkit-transform: rotate(90grad);
+    -o-transform: rotate(90grad);
+    -moz-transform:rotate(90grad);
+}
+
+.eye_left{
+    position: absolute;
+    top: 43%;
+    right: 26%;
+    width: 3%;
+    height: 5%;
+    background-color: black;
+    border-radius: 100%; 
+    transform: rotate(90grad);
+    -webkit-transform: rotate(90grad);
+    -o-transform: rotate(90grad);
+    -moz-transform:rotate(90grad);
+}
+
+.eye_right{
+    position: absolute;
+    top: 43%;
+    right: 15%;
+    width: 3%;
+    height: 5%;
+    background-color: black;
+    border-radius: 100%; 
+    transform: rotate(90grad);
+    -webkit-transform: rotate(90grad);
+    -o-transform: rotate(90grad);
+    -moz-transform:rotate(90grad);
+}
+
+.leg_left{
+    position: absolute;
+    top: 65%;
+    width: 20%;
+    height: 7%;
+    left: 30%;
+    border-radius: 100%;
+    transform: rotate(90grad);
+    -webkit-transform: rotate(90grad);
+    -o-transform: rotate(90grad);
+    -moz-transform:rotate(90grad);
+    background: gray;
+     background: radial-gradient(white, gray); 
+}
+.leg_left2{
+    position: absolute;
+    top: 65%;
+    width: 20%;
+    height: 7%;
+    left: 38%;
+    border-radius: 100%;
+    transform: rotate(70grad);
+    -webkit-transform: rotate(70grad);
+    -o-transform: rotate(70grad);
+    -moz-transform:rotate(70grad);
+    background: gray;
+     background: radial-gradient(white, gray); 
+}
+
+.leg_right{
+    position: absolute;
+    top: 65%;
+    width: 20%;
+    height: 7%;
+    right: 25%;
+    border-radius: 100%;
+    transform: rotate(90grad);
+    -webkit-transform: rotate(90grad);
+    -o-transform: rotate(90grad);
+    -moz-transform:rotate(90grad);
+    background: gray;
+     background: radial-gradient(white, gray); 
+}
+.leg_right2{
+    position: absolute;
+    top: 65%;
+    width: 20%;
+    height: 7%;
+    right: 18%;
+    border-radius: 100%;
+    transform: rotate(70grad);
+      -webkit-transform: rotate(70grad);
+    -o-transform: rotate(70grad);
+    -moz-transform:rotate(70grad);
+    background: gray;
+     background: radial-gradient(white, gray); 
+}
+
+.leg1{
+    position: absolute;
+    top: 73%;
+    right: 31%;
+    width: 4%;
+    height: 7%;
+    background-color: darkgray;
+    border-radius: 100%; 
+    transform: rotate(110grad);
+      -webkit-transform: rotate(110grad);
+    -o-transform: rotate(110grad);
+    -moz-transform:rotate(110grad);
+}
+.leg2{
+     position: absolute;
+    top: 73%;
+    right: 20%;
+    width: 4%;
+    height: 7%;
+    background-color: darkgray;
+    border-radius: 100%; 
+    transform: rotate(100grad);
+     -webkit-transform: rotate(100grad);
+    -o-transform: rotate(100grad);
+    -moz-transform:rotate(100grad);
+}
+
+.leg3{
+     position: absolute;
+    top: 73%;
+    left: 40%;
+    width: 4%;
+    height: 7%;
+    background-color: darkgray;
+    border-radius: 100%; 
+    transform: rotate(110grad);
+        -webkit-transform: rotate(110grad);
+    -o-transform: rotate(110grad);
+    -moz-transform:rotate(110grad);
+}
+
+.leg4{
+     position: absolute;
+    top: 73%;
+    left: 51%;
+    width: 4%;
+    height: 7%;
+    background-color: darkgray;
+    border-radius: 100%; 
+    transform: rotate(110grad);
+        -webkit-transform: rotate(110grad);
+    -o-transform: rotate(110grad);
+    -moz-transform:rotate(110grad);
+}
+
+.ball{
+     position: absolute;
+    top: 70%;
+    right: 8%;
+    width: 10%;
+    height: 10%;
+    background-color: orchid;
+    border-radius: 100%;
+}
+
+.container_logo{
+    position: relative;
+    margin auto;
+    display: block;
+    margin-top: 5%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    top: 40px; 
+}
+
+
+.logo_1{
+    content: "";
+    position: relative;
+    top: 25%;
+    width:100%;
+    height: 100%;
+    background: radial-gradient(violet, aqua);
+    border-radius: 100%;
+}
+
+.logo_a{
+position:absolute;
+top:55%;
+left:10%;
+height: 30%;
+width: 40%;
+border-radius: 0 0 40% 48%;
+border-bottom: 4px solid white;
+transform: rotate(-40deg);
+        -webkit-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -moz-transform:rotate(-40deg);
+z-index:3;
+}
+
+.logo_aa{
+position:absolute;
+top:55%;
+left:45%;
+height: 30%;
+width: 40%;
+border-radius: 0 0 48% 40%;
+border-bottom: 4px solid black;
+transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -moz-transform:rotate(40deg);
+z-index:3;
+}
+
+.logo_aaa{
+position:absolute;
+top:50%;
+left:28%;
+height: 40%;
+width: 40%;
+border-radius: 0 0 48% 40%;
+border-bottom: 4px solid blueviolet;
+/*transform: rotate(90deg);*/
+z-index:3;
+    
+}
+
+
+
+

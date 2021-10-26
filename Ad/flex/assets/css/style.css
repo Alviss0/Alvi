@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    overflow: visible;  
+}
+/*Главный контейнер*/
+.main{
+    display: flex;
+    min-height: 200px;
+    overflow: visible;
+    position: relative;
+    flex-direction: flex-end;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+/*Контейнер под персонажей*/
+.container{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: gainsboro;
+    width: 350px;
+    height: 350px; 
+    align-items: center;
+    flex-wrap: flex-end;  
+}
+/*Вращение по клику*/
+.container:active{
+    transform: rotate(400grad);
+    transition: 5s linear;
+    
+    
+}
+/*Принц статика*/
+.prince{
+    width: 175px;
+    height: 250px;
+    background-image: url("../pic/frog1.png");
+    background-repeat: no-repeat;
+   background-position: left;
+    margin-bottom: 0; 
+}
+/*Лягушка основа*/
+.frog{
+    width: 175px;
+    height: 250px;
+    background: url("../pic/frog3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 0;
+}
+/*Появление при наведении*/
+.frog:hover{
+    width: 175px;
+    height: 250px;
+    background: url("../pic/frog3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    opacity: 1;
+    transform: translate(-70px, 0);
+    transition: .5s;
+    
+}
+/*Надпись при наведении*/
+.frog:hover::before{
+    position: absolute;
+    content: "Ты кто?";
+    color: green;
+    font-size: 28px;
+    right: 30px;
+}
+
+/*Принцесса при клике*/
+.frog:active{
+    width: 175px;
+    height: 250px;
+    /*opacity: 1;*/
+    background-image: url("../pic/frog2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    
+    transform: scale(1.4) translate(-85px, 0);
+    transition: .5s;  
+}
+
+/*Надпись при клике*/
+.frog:active::before{
+    position: absolute;
+    content: "Принцесса!";
+    color: green;
+    font-size: 24px;
+    left: 30px;
+    bottom: 210px;
+}
+
+
+
+

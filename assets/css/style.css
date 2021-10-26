@@ -1,0 +1,159 @@
+/*.body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: black;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/*.nav {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    color: white;
+    position: static;  
+}
+
+.nav__link {
+
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.nav__link:hover {
+    color: magenta;
+    font-size: 19px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+*/
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: darkviolet;
+  height: 80px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0;
+  color: white;
+  position: static;
+}
+
+.nav__link {
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+
+  color: white;
+  text-decoration: none;
+
+  transition: color 0.1s linear;
+}
+
+.nav__link:hover {
+  color: magenta;
+  font-size: 19px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  margin-top: 60px;
+
+  background: url("../images/fon.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  color: azure;
+}
+
+.text_inner {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: blueviolet;
+  margin-left: 70px;
+  font-family: fantasy;
+}
+.footer_text {
+  font-size: 25px;
+  color: blueviolet;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.text {
+  font-size: 25px;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
